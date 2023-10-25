@@ -27,7 +27,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 160px 0;
+  padding: 140px 0;
   text-align: center;
 }
 
@@ -71,10 +71,13 @@ main a {
   margin-top: 15px;
 }
 
-header a:hover,
-main a:hover {
+header a:hover {
   color: var(--primary-color);
   background: white;
+}
+
+main a:hover {
+  opacity: 0.6;
 }
 
 main img {
@@ -92,7 +95,6 @@ main h2 {
 }
 
 main h3 {
-  margin-top: 20px;
   color: var(--primary-color);
   font-size: 13px;
   font-weight: 800;
@@ -122,7 +124,7 @@ footer {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 80px 40px 40px;
+  padding: 80px 0 40px;
 }
 
 footer h4 {
@@ -169,6 +171,7 @@ footer p a:hover {
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .grid {
@@ -189,17 +192,21 @@ footer p a:hover {
   background: white;
   color: var(--dark-text);
   border-radius: 8px;
-  margin-top: 40px;
+  box-shadow: 20px 20px 50px 0px #0705140d;
 }
 
-.card .embed {
+.why-section h3 {
+  margin-top: 20px;
+}
+
+.card .card-embed {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16/9;
   border-radius: 8px 8px 0 0;
 }
 
 .card .body {
-  padding: 25px;
+  padding: 15px 25px 25px;
 }
 
 .card .body h4 {
@@ -223,10 +230,10 @@ footer p a:hover {
   display: block;
 }
 
-.card .body a:hover {
-  color: white;
-  background: var(--primary-color);
-  opacity: 0.7;
+.yt-embed {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 15px;
 }
 
 .secondary-background {
@@ -241,7 +248,11 @@ footer p a:hover {
   opacity: 0.7;
 }
 
-@media (max-width: 900px) {
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 960px) {
   header {
     padding: 80px 25px;
   }
@@ -261,23 +272,18 @@ footer p a:hover {
   }
 
   footer {
-    padding: 60px 40px 20px;
+    padding: 60px 0 20px;
   }
 
   main h2 {
     font-size: 30px;
   }
 
-  main h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-
-  .container {
-    padding: 0 40px;
-  }
-
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .why-section h3 {
+    margin-top: 0;
   }
 }
