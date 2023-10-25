@@ -2,6 +2,7 @@
   --primary-color: #bb5cfb;
   --primary-background-color: #12101d;
   --secondary-background-color: #1e1b2c;
+  --dark-text: #272044;
 }
 
 body {
@@ -12,7 +13,10 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   line-height: 1.5;
 }
@@ -73,15 +77,40 @@ main a:hover {
   background: white;
 }
 
-main {
-  background: var(--primary-background-color);
+main img {
+  width: 500px;
+  border-radius: 20px;
+  max-width: 100%;
+  display: block;
   margin: 0 auto;
-  padding: 80px 0;
+}
+
+main h2 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+main h3 {
+  margin-top: 20px;
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 5px;
+}
+
+main p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0.6;
 }
 
 section {
-  max-width: 1000px;
+  background: var(--primary-background-color);
   margin: 0 auto;
+  padding: 80px 0;
 }
 
 footer {
@@ -97,11 +126,8 @@ footer {
 }
 
 footer h4 {
-  font-family: Playfair Display;
   font-size: 24px;
   font-weight: 700;
-  line-height: 1.5;
-  margin: 0;
 }
 
 footer ul {
@@ -140,34 +166,9 @@ footer p a:hover {
   opacity: 0.7;
 }
 
-.why-section img {
-  width: 500px;
-  border-radius: 20px;
-  max-width: 100%;
-  display: block;
+.container {
+  max-width: 1000px;
   margin: 0 auto;
-}
-
-.why-section h2 {
-  font-size: 48px;
-  font-weight: 800;
-  line-height: 1.5;
-}
-
-.why-section h3 {
-  margin-top: 20px;
-  color: var(--primary-color);
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1.5;
-  letter-spacing: 5px;
-}
-
-.why-section p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 0.6;
 }
 
 .grid {
@@ -182,6 +183,62 @@ footer p a:hover {
 
 .grid-3-columns {
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+  background: white;
+  color: var(--dark-text);
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.card .embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px 8px 0 0;
+}
+
+.card .body {
+  padding: 25px;
+}
+
+.card .body h4 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card .body h5 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.card .body p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.card .body a {
+  margin-top: 25px;
+  display: block;
+}
+
+.card .body a:hover {
+  color: white;
+  background: var(--primary-color);
+  opacity: 0.7;
+}
+
+.secondary-background {
+  background: var(--secondary-background-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  opacity: 0.7;
 }
 
 @media (max-width: 900px) {
@@ -203,25 +260,21 @@ footer p a:hover {
     font-size: 12px;
   }
 
-  main {
-    padding: 40px;
-  }
-
   footer {
     padding: 60px 40px 20px;
   }
 
-  .why-section {
-    margin-top: 0;
-  }
-
-  .why-section h2 {
+  main h2 {
     font-size: 30px;
   }
 
-  .why-section h3 {
+  main h3 {
     margin-top: 0;
     margin-bottom: 15px;
+  }
+
+  .container {
+    padding: 0 40px;
   }
 
   .grid {
